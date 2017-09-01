@@ -1,0 +1,5 @@
+env="$1"
+
+if [[ "$env" == "prod" ]]; then
+  printf "Creating SSH tunnel to production (read only) server..."
+  iex -S mix phoenix.server
