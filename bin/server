@@ -1,5 +1,11 @@
+#!/bin/bash
+
 env="$1"
 
+
+echo "Launching localhost initiated....."
+
 if [[ "$env" == "prod" ]]; then
-  printf "Creating SSH tunnel to production (read only) server..."
+  printf "\nYou have entered the production localhost. You can now use localhost:4000 for localhosting.\n"
   iex -S mix phoenix.server
+fi
