@@ -56,3 +56,13 @@ config :olio, Olio.Repo,
   database: "olio_dev",
   hostname: "localhost",
   pool_size: 10
+
+# Watch static and templates for browser reloading.
+config :olio, Olio.Endpoint,
+  live_reload: [
+    patterns: [
+      ~r{priv/static/.*(js|css|png|jpeg|jpg|gif)$},
+      ~r{web/views/.*(ex)$},
+      ~r{web/templates/.*(eex|slim|slime)$}
+    ]
+  ]
